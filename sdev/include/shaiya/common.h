@@ -63,6 +63,19 @@ namespace shaiya
     typedef Array<Array<CItem*, 24>, 6> Inventory;
     typedef Array<CItem*, 240> Warehouse;
 
+    enum struct Attribute : UINT8
+    {
+        None,
+        Fire,
+        Water,
+        Earth,
+        Wind,
+        Fire2,
+        Water2,
+        Earth2,
+        Wind2
+    };
+
     enum struct AuthStatus : UINT8
     {
         AdminA = 1,
