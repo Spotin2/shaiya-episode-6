@@ -351,8 +351,8 @@ namespace shaiya
         UINT32 dropGrade;           //0x7C
         UINT32 buy;                 //0x80
         UINT32 sell;                //0x84
-        // not used
-        UINT32 itemLimit;           //0x88
+        // custom
+        UINT32 duration;            //0x88
         PAD(20);
         ItemRealType realType;      //0xA0
         ItemMarketType marketType;  //0xA4
