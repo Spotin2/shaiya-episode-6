@@ -447,7 +447,7 @@ namespace packet_gem
 
     void item_synthesis_list_handler(CUser* user, ItemSynthesisListIncoming* incoming)
     {
-        if (user->stateType == UserStateType::Death)
+        if (user->status == UserStatus::Death)
             return;
 
         if (!incoming->squareBag || incoming->squareBag > user->bagsUnlocked || incoming->squareSlot >= max_inventory_slot)

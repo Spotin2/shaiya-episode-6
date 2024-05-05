@@ -71,7 +71,7 @@ namespace item_effect
 
     void town_scroll_handler(CUser* user, ItemTownScrollIncoming* incoming)
     {
-        if (user->stateType == UserStateType::Death)
+        if (user->status == UserStatus::Death)
             return;
 
         if (user->dbAgentDisconnect || user->debuffTypeDetail)

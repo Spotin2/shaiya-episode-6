@@ -182,7 +182,7 @@ namespace shaiya
     };
     #pragma pack(pop)
 
-    enum struct UserStateType : UINT32
+    enum struct UserStatus : UINT32
     {
         None,
         Death,
@@ -467,7 +467,7 @@ namespace shaiya
         UINT32 magicResistance;              //0x142C
         UINT32 magicCriticalHitRate;         //0x1430
         PAD(16);
-        UserStateType stateType;             //0x1444
+        UserStatus status;                   //0x1444
         PAD(4);
         bool sitting;                        //0x144C
         UINT8 unknown144D;                   //0x144D

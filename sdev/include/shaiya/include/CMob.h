@@ -24,7 +24,7 @@ namespace shaiya
     {
         Idle,
         Chase,
-        FindTarget,
+        Death,
         ReturnHome,
         Unknown100 = 100
     };
