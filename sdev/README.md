@@ -39,7 +39,16 @@ The episode 6 format has 6 quest results, each containing up to 3 items. The lib
 
 ## Item Duration
 
-This feature was removed.
+The library expects the same day(s) to seconds conversion as the client.
+
+| Days  | Duration    |
+|-------|-------------|
+| 1     | 86400       |
+| 7     | 604800      |
+| 15    | 1296000     |
+| 30    | 2592000     |
+
+Items will not be removed from guild warehouses. Items **will not** be deleted without sending a notification to the client. Check the **PS_GameData** database for modified stored procedures and custom triggers before opening an issue.
 
 ## Revenge Mark
 

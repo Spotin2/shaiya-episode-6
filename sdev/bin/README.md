@@ -1,6 +1,20 @@
 # Documentation
 
-This file has been modified to support level 80 as well as the episode 6 NpcQuest format (experimental).
+## Version 1
+
+This file is very close to the original code.
+
+## Version 2
+
+This file has been modified to support the episode 6 NpcQuest format.
+
+## Version 3
+
+This file has been modified to support level 80 and the episode 6 NpcQuest format.
+
+## Version 4
+
+This file has been modified to support level 80, the episode 6 NpcQuest format and an additional Items column that stores duration.
 
 # Notes
 
