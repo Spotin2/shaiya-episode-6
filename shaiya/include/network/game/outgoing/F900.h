@@ -20,21 +20,11 @@ namespace shaiya
         AdminCmdNoticeToOutgoing(const char* message)
             : messageLength(0), message{}
         {
-            this->messageLength = std::strlen(message) + 1;
+            this->messageLength = static_cast<UINT8>(std::strlen(message) + 1);
 
             auto result = StringCbCopyA(this->message.data(), this->message.size(), message);
             if (result == STRSAFE_E_INSUFFICIENT_BUFFER)
-                this->messageLength = this->message.size();
-        }
-
-        AdminCmdNoticeToOutgoing(const std::string& message)
-            : messageLength(0), message{}
-        {
-            this->messageLength = message.length() + 1;
-
-            auto result = StringCbCopyA(this->message.data(), this->message.size(), message.data());
-            if (result == STRSAFE_E_INSUFFICIENT_BUFFER)
-                this->messageLength = this->message.size();
+                this->messageLength = static_cast<UINT8>(this->message.size());
         }
 
         constexpr int size_without_message() { return 3; }
@@ -55,21 +45,11 @@ namespace shaiya
         AdminCmdNoticeAllOutgoing(const char* message)
             : messageLength(0), message{}
         {
-            this->messageLength = std::strlen(message) + 1;
+            this->messageLength = static_cast<UINT8>(std::strlen(message) + 1);
 
             auto result = StringCbCopyA(this->message.data(), this->message.size(), message);
             if (result == STRSAFE_E_INSUFFICIENT_BUFFER)
-                this->messageLength = this->message.size();
-        }
-
-        AdminCmdNoticeAllOutgoing(const std::string& message)
-            : messageLength(0), message{}
-        {
-            this->messageLength = message.length() + 1;
-
-            auto result = StringCbCopyA(this->message.data(), this->message.size(), message.data());
-            if (result == STRSAFE_E_INSUFFICIENT_BUFFER)
-                this->messageLength = this->message.size();
+                this->messageLength = static_cast<UINT8>(this->message.size());
         }
 
         constexpr int size_without_message() { return 3; }

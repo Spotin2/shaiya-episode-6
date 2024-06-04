@@ -98,6 +98,13 @@ namespace shaiya
         UINT8 bag;
         UINT8 slot;
         UINT8 count;
+
+        DBAgentItemCountIncoming() = default;
+
+        DBAgentItemCountIncoming(ULONG userId, UINT8 bag, UINT8 slot, UINT8 count)
+            : userId(userId), bag(bag), slot(slot), count(count)
+        {
+        }
     };
     #pragma pack(pop)
 
@@ -110,6 +117,13 @@ namespace shaiya
         UINT8 slot;
         UINT16 quality;
         UINT32 money;
+
+        DBAgentItemGemRemoveAllIncoming() = default;
+
+        DBAgentItemGemRemoveAllIncoming(ULONG userId, UINT8 bag, UINT8 slot, UINT16 quality, UINT32 money)
+            : userId(userId), bag(bag), slot(slot), quality(quality), money(money)
+        {
+        }
     };
     #pragma pack(pop)
 
